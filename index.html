@@ -33,14 +33,16 @@ button {
 <button onclick="cek()">Cek Koneksi Sistem</button>
 
 <script>
+<script>
 function cek() {
   fetch("https://script.google.com/macros/s/AKfycbwdjzDspLvKwLZC9aXoqEBKMcTzcrnS9BiF9uMiUSZqQXOdRlVz06cs8Q0ml4XE1Vpdyg/exec")
     .then(res => res.text())
-    .then(data => alert(data))
-    .catch(() => alert("Koneksi gagal"));
+    .then(data => document.body.innerHTML += "<p>" + data + "</p>");
 }
 </script>
 
+
 </body>
 </html>
+
 
